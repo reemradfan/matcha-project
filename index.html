@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الماتشا اللطيف 🌿✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --matcha-soft: #5b8e41; /* أخضر ماتشا أكثر وضوحاً وحيوية */
+            --matcha-dark: #3b6127;
+            --matcha-bg: #eaf2e3;   /* خلفية بنغمة خضراء أوضح */
+            --matcha-cream: #ffffff;
+            --pastel-pink: #f7c5d1;
+            --pastel-pink-hover: #f2aab8;
+            --text-main: #2b3a24;
+            --text-light: #526d45;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--matcha-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        /* الهيدر */
+        header {
+            background: linear-gradient(180deg, #cde3bd 0%, var(--matcha-bg) 100%);
+            padding: 50px 20px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            background-color: var(--pastel-pink);
+            color: #5a2e38;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--matcha-dark);
+            font-weight: 900;
+            margin-bottom: 8px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto 40px;
+            padding: 0 20px;
+        }
+
+        /* بطاقة الملاحظة الرئيسية */
+        .intro-card {
+            background: var(--matcha-cream);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(91, 142, 65, 0.12);
+            border: 2px dashed #b5d6a2;
+            text-align: center;
+        }
+
+        .intro-card h2 {
+            color: var(--matcha-soft);
+            margin-bottom: 10px;
+        }
+
+        /* شبكة الكروت */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--matcha-cream);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            border: 1px solid #d8e8cd;
+            border-top: 4px solid var(--matcha-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(91, 142, 65, 0.2);
+            border-color: var(--matcha-soft);
+        }
+
+        .card h3 {
+            color: var(--matcha-dark);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-right: 22px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .card ul li::before {
+            content: "🌿";
+            position: absolute;
+            right: 0;
+            font-size: 0.8rem;
+            top: 2px;
+        }
+
+        /* قسم تفاعلي */
+        .interactive-section {
+            background: linear-gradient(135deg, #74a35a, var(--matcha-dark));
+            color: white;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(59, 97, 39, 0.25);
+        }
+
+        .interactive-section h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .btn-cute {
+            background-color: var(--pastel-pink);
+            color: #4a232c;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn-cute:hover {
+            background-color: var(--pastel-pink-hover);
+            transform: scale(1.05);
+        }
+
+        #secret-tip {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            min-height: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* أنيميشن */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="badge">Matcha Time 🍵✨</span>
+        <h1>مشروبك المفضل ولحظاتك الهادئة</h1>
+        <p>كل ما تحتاجين معرفته عن عالم الماتشا الأخضر اللطيف</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-card">
+            <h2>ما هي الماتشا؟ 🌿</h2>
+            <p>أوراق شاي أخضر يابانية غنية بالفوائد، تُطحن بحب لتتحول إلى بودرة زمردية ناعمة. تمنحك راحة البال، وتأخذك لجرعة لطيفة من الانتعاش يومياً!</p>
+        </div>
+
+        <div class="grid-cards">
+            
+            <div class="card">
+                <h3>✨ فوائد للجمال والصحة</h3>
+                <ul>
+                    <li>بشرة نضرة ومشرقة بفضل مضادات الأكسدة.</li>
+                    <li>طاقة هادئة ومستمرة بدون توتر أو قلق.</li>
+                    <li>تسريع لطيف لعملية الأيض وحرق الدهون.</li>
+                    <li>تنظيف وتحسين صحة الجسم من الداخل.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🍓 طرق الاستمتاع بكوبك</h3>
+                <ul>
+                    <li><strong>ماتشا لاتيه بارد:</strong> مع حليب الشوفان وشوية سيروب فانيليا.</li>
+                    <li><strong>ماتشا دافئة:</strong> للمساءات الهادئة مع رغوة حليب خفيفة.</li>
+                    <li><strong>سبيشال ماتشا:</strong> إضافة القليل من بودرة الفراولة أو الورد.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🎀 سر الكوب المثالي</h3>
+                <ul>
+                    <li>اخفقيها بفرشاة البامبو (Chasen) بشكل حرف W.</li>
+                    <li>استخدمي ماء دافئ وليس مغلياً (حتى لا تتغير نكهتها).</li>
+                    <li>تحلية خفيفة بـ العسل أو سيروب القيقب تفرّق في المذاق!</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- قسم تفاعلي -->
+        <div class="interactive-section">
+            <h3>💌 نصيحة اليوم لكوب الماتشا!</h3>
+            <p>اضغطي على الزر لنعطيك فكرة لطيفة لكوبك القادم</p>
+            <button class="btn-cute" onclick="showTip()">إعطني نصيحة 🍵</button>
+            <div id="secret-tip"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>صُنع بكل حب لـ عشاق الماتشا 💚 2026</p>
+    </footer>
+
+    <script>
+        const tips = [
+            "جربي إضافة حليب جوز الهند مع لمسة فانيليا لمذاق كريمي استوائي! 🥥✨",
+            "اخفقي الماتشا بماء دافئ فقط قبل إضافة الحليب البارد والثلج لنتيجة مثالية! 🧊",
+            "أضيفي بيوريه الفراولة في أسفل الكوب لمشروب ماتشا فراولة يفتح النفس! 🍓💚",
+            "تأكدي من حفظ علبة الماتشا في الثلاجة ليحافظ على لونها الأخضر الجميل! ❄️"
+        ];
+
+        function showTip() {
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            document.getElementById('secret-tip').innerText = randomTip;
+        }
+    </script>
+
+</body>
+</html>
